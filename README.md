@@ -8,6 +8,15 @@ If any resource goes beyond a safe threshold (e.g., CPU > 80%), it logs an alert
 
 ---
 
+| Resource  | What it Means                 | Threshold Purpose                  |
+| --------- | ----------------------------- | ---------------------------------- |
+| CPU       | Brain of computer             | Warns if system is overloaded      |
+| Memory    | Temporary working space (RAM) | Prevents slowdowns or crashes      |
+| Disk      | Storage space                 | Prevents running out of storage    |
+| Processes | Programs/tasks running        | Keeps system from being overloaded |
+
+
+
 ## Project Setup
 
 ### 1. Create Project Folder
@@ -81,6 +90,7 @@ Click Finish.
 To test: Right-click → Run. 
 
 Check system_health.log.
+
 
 
 
