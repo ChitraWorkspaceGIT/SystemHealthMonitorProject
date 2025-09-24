@@ -4,6 +4,8 @@ This project is a Python script that monitors the health of a Linux system.
 It checks important system resources like CPU usage, memory usage, disk space, and running processes.
 If any resource goes beyond a safe threshold (e.g., CPU > 80%), it logs an alert in the console and in a log file.
 
+*System Health Monitors keep your computer or server safe, fast, and stable by tracking resources and sending alerts when something goes wrong*
+
 ---
 
 ## Project Setup
@@ -79,5 +81,6 @@ Click Finish.
 To test: Right-click → Run. 
 
 Check system_health.log.
+
 
 
