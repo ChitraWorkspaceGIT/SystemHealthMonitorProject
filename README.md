@@ -28,6 +28,8 @@ Go to Terminal → New Terminal in VS Code.
 
 Step 2: Install Required Package
 
+Psutil is a Python cross-platform library used to access system details and process utilities. It is used to keep track of various resources utilization in the system. Usage of resources like CPU, memory, disks, network, sensors can be monitored. Hence, this library is used for system monitoring, profiling, limiting process resources, and the management of running processes.
+
 The script uses the psutil library. Install it by running:
 
 pip install psutil
@@ -40,8 +42,37 @@ python system_health_monitor.py
 
 📝 Logs
 
-When you run the script:
+When the script runs:
 
-You’ll see alerts in the console.
+Console Output: Shows system health and alerts.
 
-A log file named system_health.log will be created in your folder with all reports.
+Log File: system_health.log in the project folder.
+Automate on Windows (Task Scheduler)
+
+Press Windows + R, type taskschd.msc, press Enter.
+
+Click Create Basic Task… → Name: System Health Monitor.
+
+Trigger: Daily, set time (e.g., 8:00 AM).
+
+Action: Start a Program
+
+Program/script: Full path to Python:
+
+C:\Users\chint\AppData\Local\Programs\Python\Python312\python.exe
+
+
+Add arguments: Full path to script:
+
+C:\Users\chint\DOCUMENTS\SystemHealthMonitorProject\system_health_monitor.py
+
+
+Start in: Folder path only:
+
+C:\Users\chint\DOCUMENTS\SystemHealthMonitorProject
+
+
+Click Finish.
+
+To test: Right-click → Run. Check system_health.log.
+
