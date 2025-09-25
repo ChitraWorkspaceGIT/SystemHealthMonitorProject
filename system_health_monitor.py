@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# Beginner-friendly System Health Monitor
+
 
 import psutil
 from datetime import datetime
@@ -19,21 +18,21 @@ def log_message(message):
     with open(LOG_FILE, "a") as f:
         f.write(line + "\n")
 
-# CPU
+# CPU Usage
 cpu = psutil.cpu_percent(interval=1)
 if cpu > CPU_THRESHOLD:
     log_message(f"ALERT: High CPU usage: {cpu}%")
 else:
     log_message(f"CPU usage: {cpu}%")
 
-# Memory
+# Memory Usage
 mem = psutil.virtual_memory()
 if mem.percent > MEM_THRESHOLD:
     log_message(f"ALERT: High Memory usage: {mem.percent}%")
 else:
     log_message(f"Memory usage: {mem.percent}%")
 
-# Disk
+# Disk Space
 disk = psutil.disk_usage('/')
 if disk.percent > DISK_THRESHOLD:
     log_message(f"ALERT: High Disk usage: {disk.percent}%")
